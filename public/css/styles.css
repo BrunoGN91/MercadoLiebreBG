@@ -62,7 +62,10 @@ h2 {
 }
 
 .contenedorMenu {
-   display: none
+   display: none;
+   
+   justify-content: space-evenly;
+
 }
 
 .contenedorMenu1 {
@@ -559,7 +562,7 @@ p {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
     }
 
 .contenedor01,
@@ -619,7 +622,10 @@ p {
 
 @media (min-width: 769px) {
 
+.contenedorMenu {
 
+    justify-content: space-evenly;
+}
 
 .contenedor01,
 .contenedor02,
