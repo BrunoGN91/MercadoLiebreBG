@@ -666,15 +666,20 @@ p {
 
 @media (min-width: 1100px) {
  
- 
+.sub-contenedor01 .descripcion,
+.sub-contenedor02 .descripcion,
+.sub-contenedor03 .descripcion,
+.sub-contenedor04 .descripcion {
+    font-size: 1.5em;
+}
 
 .contenedor01,
 .contenedor02,
 .contenedor03,
 .contenedor04 {
     
-    
-    max-width: 230px
+    background-color: white;
+    max-width: 20%
 }
 
 
@@ -688,7 +693,7 @@ p {
     height:30px;
     right: 20px;
     position: relative;
-    top: -23%;
+    top: -30%;
     left: 82%
     
 
