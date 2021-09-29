@@ -169,6 +169,7 @@ p {
 
 .enviar:hover,
 .borrar:hover {
- 
-    color: blue
+    color: white;
+    background-color: #0022AA;
+    border-color: #0022AA;
 }
