@@ -173,3 +173,13 @@ p {
     background-color: #0022AA;
     border-color: #0022AA;
 }
+
+
+.feedback {
+
+  display:inline-block;
+  font-size: 12px;
+  min-width: 1ch;
+  color:red
+  
+}

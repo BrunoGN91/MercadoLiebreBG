@@ -5,40 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-    <title>Document</title>
+    <title>Mercado Liebre</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
     <header>
         <div class='contenedorHeader01'> 
-       <a href="/"><img class='logo' src='/images/logo-mercado-liebre.svg'></a>
+       <img class='logo' src='/images/logo-mercado-liebre.svg'>
             
-            <div class='buscador'>
+             <div class='buscador'>
                  
-                    <i class="fas fa-search"></i>
-                    <input class="barra-busqueda" type="text" placeholder ="Barra de busqueda...">
+                 <i class="fas fa-search"></i>
+                 <input class="barra-busqueda" type="text" placeholder ="Barra de busqueda...">
             </div>
-             <p><a></p></a>
           
                     <h2> <i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta de crédito</h2>
                 </div>
 
                             <nav class='contenedorMenu'>
                                 <div class='contenedorMenu1'>
-                                    <a href='#'>Ofertas</a>
+                                    <a href='/'>Ofertas</a>
                                     <a href='#'>Tiendas Oficiales</a>
                                     <a href='#'>Vender</a>
                                     <a href='#'>Ayuda</a>
                                 </div>
                                 <div class='contenedorMenu2'>
                                     <a href='/register'>Creá tu cuenta    <i class="far fa-id-card"></i></a>
-                                    <a href='#'>Ingresá    <i class="fas fa-sign-in-alt"></i></a> 
+                                    <a href='/login'>Ingresá    <i class="fas fa-sign-in-alt"></i></a> 
                                     <a href='#'>Mis compras <i class="fas fa-shopping-cart"></i></a>
                                 </div>
                             </nav>
@@ -47,20 +45,43 @@
                   
     </header>
     <img class="banner" src="/images/img-home-banner.jpg" alt="">
-    <main>
-        <form action="/login" method="POST" enctype="multipart/form-data">
-            <div class="form-login">
-                <label for="">Nombre y Apellido</label>
-                <input type="text" name="fullname" required>
-                <span class="user-error"></span>
-                <label for="">Contraseña</label>
-                <input type="password" name="password" required>
-                <span class="password-error"></span>
-
+    <main>  
+        <!-- IMAGENES -->
+    <section class="noticia">Sección: Basado en tu última visita</section>
+            
+    <article class='article'>
+        <div class="main-images">
+            <% stocked.forEach(producto => {  %> 
+            <div class='contenedor01'>
+                <img src="<%=producto.image%> ">
+                <div class='sub-contenedor01'>
+                        <h1 class='precios'>$ <%=producto.price%></h1>
+                        <h2 class='descuentos'> %<%=producto.discounts%> Descuento</h2>
+                        <div class='delivery1'><i class="fas fa-truck"></i></div>
+                </div>
+                <div class="contenedor01-data">
+                    <%=producto.name%>
             </div>
-            <button class="enviar" type="register">Log In</button>
-
-        </form>
+        </div>
+        <% }) %> 
+    </div>
+    </article>    
+    <section class="noticia">Ofertas</section>
+    <div class="main-images">
+        <% offers.forEach(producto => {  %> 
+        <div class='contenedor01'>
+            <img src="<%=producto.image%> ">
+            <div class='sub-contenedor01'>
+                    <h1 class='precios'>$ <%=producto.price%></h1>
+                    <h2 class='descuentos'> %<%=producto.discounts%> Descuento</h2>
+                    <div class='delivery1'><i class="fas fa-truck"></i></div>
+            </div>
+            <div class="contenedor01-data">
+                <%=producto.name%>
+        </div>
+    </div>
+    <% }) %> 
+</div>         
     </main>
     
     <footer class='contenedor-footer'> 
@@ -88,7 +109,8 @@
         </div>
             <div class="copyright">Copyright &copy; 1999-2020 MercadoLiebre S.R.L</div>
         
-</footer>
-
+        
+    </footer>
+    
 </body>
 </html>

@@ -33,6 +33,7 @@ form {
     width: 100%;
     max-width: 500px;
     margin-bottom: 3px;
+    position: relative
     
 }
 
@@ -72,4 +73,14 @@ form {
     color: white;
     background-color: #0022AA;
     border-color: #0022AA;
+}
+
+
+
+#ojito {
+    position: absolute;
+    top:80.5%;
+    right: 2%;
+    font-size: 1.2rem;
+    
 }
