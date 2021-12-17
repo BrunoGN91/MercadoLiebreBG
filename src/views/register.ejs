@@ -49,14 +49,14 @@
     <img class="banner" src="/images/img-home-banner.jpg" alt="">
     <main>  
         <!-- FORMULARIO -->
-        <form action="/views/register" method="POST" enctype="multipart/form-data"><!--ENCTYPE SE AGREGA SOLO SI TENEMOS INPUT DE TIPO FILE-->
+        <form id="register" action="/register" method="POST" ><!--ENCTYPE SE AGREGA SOLO SI TENEMOS INPUT DE TIPO FILE-->
             
             
             <div class="form-control">
                 <label for="">Nombre y Apellido</label>
-                <input type="text" name="fullname" placeholder="Ej: Pablo Perez" required>
+                <input type="text" name="name" placeholder="Ej: Pablo Perez" required>
                 <span class="feedback"> Debe Ingresar al menos 1 caracter</span>
-            
+                <span style="color: red"><%= errors.name %> </span>
             </div>
             <div class="form-control">
                 <label for="">Usuario</label>
@@ -71,13 +71,13 @@
             </div>
             <div class="form-control">
                 <label for="">Domicilio</label>
-                <input type="text" name="adress">
+                <input type="text" name="address">
             
             </div>
             
             <div class="form-control">
                 <label for="">Perfil de Usuario</label>
-                <select name="perfil" class="perfil-opciones">
+                <select name="user_profile" class="perfil-opciones">
                     <option disabled selected>  Selecciona una opción</option>
                     <option value="comprador">Comprador</option>
                     <option value="vendedor">Vendedor</option>
@@ -157,6 +157,6 @@
             <div class="copyright">Copyright &copy; 1999-2020 MercadoLiebre S.R.L</div>
         
     </footer>
-    
+    <script src="scripts/register.js"></script>
 </body>
 </html>

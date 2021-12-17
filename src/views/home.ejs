@@ -38,6 +38,7 @@
                                     <a href='/register'>Creá tu cuenta    <i class="far fa-id-card"></i></a>
                                     <a href='/login'>Ingresá    <i class="fas fa-sign-in-alt"></i></a> 
                                     <a href='#'>Mis compras <i class="fas fa-shopping-cart"></i></a>
+                                    <p id="cart_number"></p>
                                 </div>
                             </nav>
                            
@@ -58,8 +59,13 @@
                         <h1 class='precios'>$ <%=producto.price%></h1>
                         <h2 class='descuentos'> %<%=producto.discounts%> Descuento</h2>
                         <div class='delivery1'><i class="fas fa-truck"></i></div>
+                        <button class="add-to-cart" value="<%=producto.id%>">
+                            Add
+                        </button>
+                     
                 </div>
                 <div class="contenedor01-data">
+                    
                     <%=producto.name%>
             </div>
         </div>
@@ -111,6 +117,6 @@
         
         
     </footer>
-    
+    <script src="scripts/carrito.js"></script>    
 </body>
 </html>
