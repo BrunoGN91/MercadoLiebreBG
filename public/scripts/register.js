@@ -1,20 +1,23 @@
-const form = document.querySelector("#register")
+const form = document.querySelector("#register");
+const spanName = document.querySelector("#name")
 
 form.addEventListener("submit", function(e){
     e.preventDefault()
     let errors = {}
 
-    if(form.namespaceURI.valueOf.length <=0){
-        errors.name = "el campo no debe estar vacio"
+    if(form.name.value.length <= 0){
+        errors.name = "el campo no debe estar vacio";
+       spanName.innerText = errors.name
     } else if(form.name.value.length < 8){
         errors.name = "el campo debe tener como minimo 8 ch"
+        spanName.innerText = errors.name
     } else {
         delete errors.name
     }
 
     console.log()
 
-    if(Object.keys(errors).length < 0){
+    if(Object.keys(errors).length == 0){
         form.submit()
     }
 

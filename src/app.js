@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const cookieParser = require("cookie-parser")
 /* Configuracion Extra para Ruta de Imagenes Public */
 
 
@@ -15,10 +16,14 @@ app.listen(process.env.PORT || 3000, function() {
 
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, 'views'));
+
+/* Cookies */
+app.use(cookieParser())
 /* Routes */
 
 const usersRouter = require('./routes/users.js');
 const mainRoute = require('./routes/main.js');
+const { cookie } = require('express/lib/response');
 
 app.use('/', mainRoute);
 app.use('/', usersRouter);

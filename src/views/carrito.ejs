@@ -5,9 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/styles.css">
+        <script src="scripts/index.js"></script>
+       
 </head>
 <body>
-    
+<header>
+    <div class='contenedorHeader01'>
+        <a href="/"><img class='logo' src='/images/logo-mercado-liebre.svg'></a>
+
+        <div class='buscador'>
+
+            <i class="fas fa-search"></i>
+            <input class="barra-busqueda" type="text" placeholder="Barra de busqueda...">
+        </div>
+
+        <h2> <i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta de crédito</h2>
+    </div>
+
+    <nav class='contenedorMenu'>
+        <div class='contenedorMenu1'>
+            <a href='/'>Ofertas</a>
+            <a href='#'>Tiendas Oficiales</a>
+            <a href='#'>Vender</a>
+            <a href='#'>Ayuda</a>
+        </div>
+        <div class='contenedorMenu2'>
+            <a href='/register'>Creá tu cuenta <i class="far fa-id-card"></i></a>
+            <a href='/login'>Ingresá <i class="fas fa-sign-in-alt"></i></a>
+            <a href='/cart'>Mis compras <i class="fas fa-shopping-cart"></i></a>
+            <p class="cart_number" id="cart_number"></p>
+        </div>
+    </nav>
+
+    <div class="burguer-menu"> <i class='fas fa-bars'></i></div>
+
+</header>
+<img class="banner" src="/images/img-home-banner.jpg" alt="">
+
+<div class="main-images">
+   
+        <div id="contenedorProducto" class='contenedor01'>
+            <img id="image" src="">
+            <div class='sub-contenedor01'>
+                <h1 id="price" class='precios'>$
+                </h1>
+                <h2 id="discounts" class='descuentos'> % Descuento</h2>
+                <div id="productItem" class='delivery1'><i class="fas fa-truck"></i></div>\
+         
+
+            </div>
+            <div class="contenedor01-data">
+
+                <p id="productName">
+                   
+                </p>
+            </div>
+        </div>
+        
+</div>
 
     <script src="/scripts/cartList.js"></script>
 </body>

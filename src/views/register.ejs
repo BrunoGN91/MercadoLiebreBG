@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/register.css">
+    <script src="scripts/index.js"></script>
 </head>
 <body>
     <header>
@@ -54,19 +55,18 @@
             
             <div class="form-control">
                 <label for="">Nombre y Apellido</label>
-                <input type="text" name="name" placeholder="Ej: Pablo Perez" required>
-                <span class="feedback"> Debe Ingresar al menos 1 caracter</span>
-                <span style="color: red"><%= errors.name %> </span>
+                <input type="text"  name="name" placeholder="Ej: Pablo Perez" >
+                <span id="name" style="color: red"></span>
             </div>
             <div class="form-control">
                 <label for="">Usuario</label>
-                <input type="text" name="user" selected required>
+                <input type="text" name="user" selected >
                 
             
             </div>
             <div class="form-control">
                 <label for="">Fecha de nacimiento</label>
-                <input type="date" name="birthdate" placeholder="" selected required>
+                <input type="date" name="birthdate" placeholder="" selected >
             
             </div>
             <div class="form-control">
@@ -115,12 +115,12 @@
             </div>
             <div class="form-control">
                 <label for="">Contraseña</label>
-                <input type="password" name="password" selected required>
+                <input type="password" name="password" selected>
             
             </div>
             <div class="form-control">
                 <label for="">Confirmar Contraseña</label>
-                <input type="password" name="password" selected required>
+                <input type="password" name="password" selected>
             
             </div>
                 <div class="buttons-box">
