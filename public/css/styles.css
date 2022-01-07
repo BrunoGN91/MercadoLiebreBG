@@ -216,7 +216,7 @@ main.main-index {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .medios-de-pago li{
@@ -233,10 +233,23 @@ main.main-index {
   flex-direction: row;
   align-items: center;
 }
+.tarjetas-data{
+  padding-left: 20px
+}
 
+.tarjetas-data h2{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.tarjetas-data p{
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #0074aa;
+}
 .medios-de-pago li i {
   font-size: 1.8em;
-  color: blue;
+  color: rgb(18, 137, 206);
   padding: 15px 15px;
   border-radius: 100%;
   border: 0.05px solid rgb(235, 235, 235)
