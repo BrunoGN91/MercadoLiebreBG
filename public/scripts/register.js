@@ -4,10 +4,12 @@ form.addEventListener("submit", function(e){
     e.preventDefault()
     let errors = {}
 
-    if(form.namespaceURI.valueOf.length <=0){
+    if(form.name.value.length <=0){
         errors.name = "el campo no debe estar vacio"
+        document.querySelector("#name").innerText = errors.name
     } else if(form.name.value.length < 8){
         errors.name = "el campo debe tener como minimo 8 ch"
+        document.querySelector("#name").innerText = errors.name
     } else {
         delete errors.name
     }

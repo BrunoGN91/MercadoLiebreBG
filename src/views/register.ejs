@@ -1,72 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <title>Document</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/register.css">
-</head>
+<%- include('./partials/head.ejs') %>
 <body>
-    <header>
-        <div class='contenedorHeader01'> 
-       <img class='logo' src='/images/logo-mercado-liebre.svg'>
-        
-            <div class='buscador'>
-                 
-                    <i class="fas fa-search"></i>
-                    <input class="barra-busqueda" type="text" placeholder ="Barra de busqueda...">
-            </div>
-             <p><a></p></a>
-          
-                    <h2> <i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta de crédito</h2>
-                </div>
-
-                            <nav class='contenedorMenu'>
-                                <div class='contenedorMenu1'>
-                                    <a href='#'>Ofertas</a>
-                                    <a href='#'>Tiendas Oficiales</a>
-                                    <a href='#'>Vender</a>
-                                    <a href='#'>Ayuda</a>
-                                </div>
-                                <div class='contenedorMenu2'>
-                                    <a href='/register'>Creá tu cuenta    <i class="far fa-id-card"></i></a>
-                                    <a href='/login'>Ingresá    <i class="fas fa-sign-in-alt"></i></a> 
-                                    <a href='#'>Mis compras <i class="fas fa-shopping-cart"></i></a>
-                                </div>
-                            </nav>
-                           
-                            <div class="burguer-menu"> <i class='fas fa-bars'></i></div>
-                  
-    </header>
-    <img class="banner" src="/images/img-home-banner.jpg" alt="">
-    <main>  
+    <%- include('./partials/header.ejs') %>
+    
+    <main class="register-main">  
         <!-- FORMULARIO -->
-        <form id="register" action="/register" method="POST" ><!--ENCTYPE SE AGREGA SOLO SI TENEMOS INPUT DE TIPO FILE-->
+        <form class="register-form" id="register" action="/register" method="POST" ><!--ENCTYPE SE AGREGA SOLO SI TENEMOS INPUT DE TIPO FILE-->
             
             
             <div class="form-control">
                 <label for="">Nombre y Apellido</label>
-                <input type="text" name="name" placeholder="Ej: Pablo Perez" required>
-                <span class="feedback"> Debe Ingresar al menos 1 caracter</span>
-                <span style="color: red"><%= errors.name %> </span>
+                <input type="text" placeholder="Ej: Pablo Perez" >
+                <span  id="name" style="color: red"></span>
             </div>
             <div class="form-control">
                 <label for="">Usuario</label>
-                <input type="text" name="user" selected required>
+                <input type="text" name="user" selected >
                 
             
             </div>
             <div class="form-control">
                 <label for="">Fecha de nacimiento</label>
-                <input type="date" name="birthdate" placeholder="" selected required>
+                <input type="date" name="birthdate" placeholder="" selected >
             
             </div>
             <div class="form-control">
@@ -115,12 +69,12 @@
             </div>
             <div class="form-control">
                 <label for="">Contraseña</label>
-                <input type="password" name="password" selected required>
+                <input type="password" name="password" selected >
             
             </div>
             <div class="form-control">
                 <label for="">Confirmar Contraseña</label>
-                <input type="password" name="password" selected required>
+                <input type="password" name="password" selected >
             
             </div>
                 <div class="buttons-box">
@@ -131,32 +85,7 @@
         </form>
     </main>
     
-    <footer class='contenedor-footer'> 
-        <div class="footerbox01">
-            <div class='tamano'><i class="fas fa-credit-card"></i></div>
-            <ul>
-            <strong class="id">Pagá con efectivo</strong>
-
-            <div>Con Mercado Liebre Cash, tenés cuotas sin innterés con tarjeta o efectivo en puntos de pago. Y siempre es seguro!</div>
-            </ul>
-        </div>
-        <div class="footerbox02">
-            <div class='tamano'><i class="fas fa-gift"></i></div>
-            <ul>
-            <strong class="id">Envío gratis desde $2,500</strong>
-            <div>Solo por estar registrad@ en Mercado Liebre tenés enváos gratis en miles de productos. Es un beneficio de Mercado Puntos</div>
-            </ul>
-        </div>
-        <div class="footerbox03">
-            <div class='tamano'><i class="fas fa-user-shield"></i></div>
-            <ul>
-            <strong class="id">Seguridad de Principio a fin</strong>
-            <div>No te gusta? Devolvelo! En MercadoLiebre no hay nada que no puedas hacer porque estás siempre protegid@</div>
-            </ul>
-        </div>
-            <div class="copyright">Copyright &copy; 1999-2020 MercadoLiebre S.R.L</div>
-        
-    </footer>
+    <%- include('./partials/footer.ejs') %>
     <script src="scripts/register.js"></script>
 </body>
 </html>

@@ -1,12 +1,13 @@
 /* Estilos Generales para todos los elemntos HTML*/
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Raleway", sans-serif;
   box-sizing: border-box;
+  
 }
 
 /* ----------HEADER------------ */
@@ -15,7 +16,7 @@ header {
   margin: auto;
   padding: 0px 0px 10px 0px;
   max-height: 350px;
-  background-color: #eac926;
+  background-color: #fef15d;
   color: #03264c;
   font-family: "Roboto", sans-serif;
   list-style-type: none;
@@ -32,14 +33,26 @@ header {
 }
 
 .logo {
-  min-width: 100px;
-  max-width: 400px;
+  display: flex;
+  align-items: center;
+  width:10vw;
+  height:3vw
 }
 
 .contenedorMenu {
   display: none;
+}
 
-  justify-content: space-evenly;
+.location-delivery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+.location-delivery i {
+  font-size: 2rem;
+  padding-right: 5px;
 }
 
 .contenedorMenu1 {
@@ -47,17 +60,18 @@ header {
   flex-direction: row;
   align-items: center;
   width: 400px;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 10px;
 }
 
 .contenedorMenu2 {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-around;
-  width: 40vw;
+  align-items: center;
+  width: 500px;
+  justify-content: space-evenly;
   padding: 10px;
+  
 }
 
 header ul {
@@ -75,14 +89,22 @@ header i {
 .buscador {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 5px;
   min-width: 25%;
-  max-width: 300px;
-  height: 30px;
-  border: 2px solid #666;
+  width: 40vw;
+  height: 40px;
+  border: 0.5px solid white;
+  box-shadow: 0px 1px 5px 1px rgb(214, 214, 214);
   color: #666;
+}
+
+.buscador i {
+  padding: 5px 0px 5px 10px;
+  border-left: 0.5px solid rgb(214, 214, 214);
 }
 
 .buscador:hover {
@@ -126,12 +148,36 @@ header i {
 
 /*---------------- MAIN-------------------*/
 
-main {
+
+
+main.main-index {
   width: 100%;
   font-size: 12px;
-  background-color: rgb(201, 201, 201);
-  padding: 25px;
+  background-color: #ebebeb;
   margin: auto;
+}
+
+.adds_slider {
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+}
+
+.adds_slider ul {
+  display: flex;
+  padding: 0;
+  width: 300%;
+  animation: change 20s infinite;
+  animation-direction: alternate;
+}
+
+.adds_slider li {
+  width: 100%;
+  list-style: none;
+}
+
+.adds_slider img {
+  width: 100%;
 }
 
 .noticia {
@@ -153,6 +199,47 @@ main {
   transition: 0.5s;
   overflow: hidden;
   padding: 20px;
+}
+
+.medios-de-pago {
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 0.5px solid rgb(214, 214, 214);
+  box-shadow: 0px 1px 5px 1px rgb(214, 214, 214);
+  margin: 50px 100px;
+  height: 100px;
+  height: 100%
+}
+
+
+.medios-de-pago ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.medios-de-pago li{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 20px
+  
+}
+
+.tarjeta-credito {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.medios-de-pago li i {
+  font-size: 1.8em;
+  color: blue;
+  padding: 15px 15px;
+  border-radius: 100%;
+  border: 0.05px solid rgb(235, 235, 235)
 }
 
 .contenedor01 {
@@ -281,6 +368,32 @@ main {
   }
 }
 
+
+@keyframes change {
+  0% {
+    margin-left: 0;
+  }
+  30% {
+    margin-left: 0%;
+  }
+
+  35% {
+    margin-left: -100%;
+  }
+  80% {
+    margin-left: -100%;
+  }
+
+  85% {
+    margin-left: -200%;
+  }
+  100% {
+    margin-left: -200%;
+  }
+
+
+}
+
 /* ---------------FOOTER--------------*/
 
 .footer ul {
@@ -307,10 +420,6 @@ footer {
   justify-content: center;
   color: blue;
   padding: 20px;
-}
-
-p {
-  padding: 10px;
 }
 
 .contenedor-footer {
@@ -353,7 +462,267 @@ p {
     display: none;
   }
   .contenedorMenu {
+  
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-evenly;
   }
+}
+
+
+/* ------------------MAIN FORMS --------------- */
+
+main.register-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+form.register-form {
+
+  margin: 15px auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-control {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 3px;
+
+}
+
+.form-control label {
+  
+  font-family: 'Raleway', sans-serif;
+  
+  padding-bottom: 10px;
+  padding-top: 10px
+}
+
+.form-control input {
+
+  height: 30px;
+  outline: none;
+  text-indent: 10px;
+  border: 1px #ffc246 solid;
+  border-radius: 20px;
+  width: 100%;
+  text-align: start;
+
+
+}
+
+.perfil-opciones {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.form-control-categorias {
+  padding-top: 20px;
+  border-top: 1px solid #ffc246;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  height: 30px
+
+  
+}
+
+.form-control-categorias label,
+.form-control-categorias input {
+  
+  margin: 3px;
+  display: flex;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.form-control-categorias .electro-box,
+.form-control-categorias .moda-box,
+.form-control-categorias .healthy-box,
+.form-control-categorias .toy-box,
+.form-control-categorias .home-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  width: 100%
+}
+
+.form-control-avatar {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+
+}
+
+.form-control-avatar label {   
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+
+}
+
+.form-control-avatar input {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 10px;
+  border-top: 1px solid #ffc246;
+
+}
+
+.buttons-box {
+  margin-top: 10px;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 400px;
+}
+
+.enviar {
+  outline: none;
+  border-radius: 20px;
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  background-color: none
+}
+
+.borrar {
+  outline: none;
+  border-radius: 20px;
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  background-color: none
+}
+
+.enviar:hover,
+.borrar:hover {
+  color: white;
+  background-color: #0022AA;
+  border-color: #0022AA;
+}
+
+
+.feedback {
+
+display:inline-block;
+font-size: 12px;
+min-width: 1ch;
+color:red
+
+}
+
+
+/* FORM LOGIN */
+
+
+main.login-main {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  height: 100%;
+}
+
+form.login-form {
+  display: flex;
+  justify-content: top;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
+}
+
+.form-login {
+
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 3px;
+  position: relative
+  
+}
+
+.form-login label {
+
+  font-family: 'Raleway', sans-serif;
+  padding-bottom: 10px;
+  padding-top: 10px
+
+}
+.form-login input {
+
+  height: 30px;
+  outline: none;
+  text-indent: 10px;
+  border: 1px #ffc246 solid;
+  border-radius: 20px;
+  width: 100%;
+
+  text-align: start;
+
+
+}
+
+
+.enviar {
+  margin-top: 20px;
+  outline: none;
+  border-radius: 20px;
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  max-width: 200px;
+  background-color: none
+}
+
+.enviar:hover {
+  color: white;
+  background-color: #0022AA;
+  border-color: #0022AA;
+}
+
+
+
+#ojito {
+  position: absolute;
+  top:80.5%;
+  right: 2%;
+  font-size: 1.2rem;
+  
 }
