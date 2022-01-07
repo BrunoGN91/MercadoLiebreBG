@@ -1,6 +1,4 @@
-const $ = (element) => {
-    return document.querySelector(element)
-}
+
 // esto iria en index.js
 
 

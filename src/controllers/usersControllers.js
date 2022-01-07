@@ -5,6 +5,11 @@ const User = require("../models/User.js")
 const jsonDeUsuarios = fs.readFileSync(path.resolve(__dirname, "../dataJson/users.json"))
 const usuarios = JSON.parse(jsonDeUsuarios);
 
+
+const jsonDeProductos = fs.readFileSync(path.resolve(__dirname, "../dataJson/MOCK_DATA.json"))
+const productos = JSON.parse(jsonDeProductos)
+
+
 const newUser = function () {
     
     usuarios.forEach(usuario => {
@@ -41,8 +46,5 @@ module.exports = {
     },
     profile: function (req, res) {
         return res.render("profile")
-    },
-    cart: function (req, res) {
-        return res.render("carrito")
     }
 }

@@ -449,7 +449,12 @@ footer {
   align-items: center;
   justify-content: center;
 }
-
+/*---------------- CARRITO -------------------*/
+.cartProducts {
+  width: 30vw;
+  color: blue;
+  border: 1px red solid;
+}
 /* --------------QUERIES----------*/
 
 @media (min-width: 361px) {
