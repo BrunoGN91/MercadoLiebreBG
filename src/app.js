@@ -19,9 +19,11 @@ app.set('views', path.resolve(__dirname, 'views'));
 
 const usersRouter = require('./routes/users.js');
 const mainRoute = require('./routes/main.js');
+const productRoute = require('./routes/product.js');
 
 app.use('/', mainRoute);
 app.use('/', usersRouter);
+app.use('/products', productRoute)
 
 
 
