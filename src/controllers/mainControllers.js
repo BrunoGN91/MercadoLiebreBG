@@ -25,6 +25,14 @@ module.exports = {
             
         })
         res.render('home', {stocked: stocked, offers: offers})
+    },
+    cart: function (req, res) {
+        
+        return res.render("carrito", {productos: productos})
+    },
+     productos: function (req, res) {
+        
+        return res.send(productos)
     }
 
 }
