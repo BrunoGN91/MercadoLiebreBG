@@ -1,36 +1,43 @@
- const fetch = require("node-fetch")
 
     const productName = qs("#productName")
-    const productImg = qs("#image")
+    const productImg = qs("#productImg")
+    const cartProduct = qs("#cartProduct")
     const string = localStorage.getItem("cartList")
-    const data = Array.from(string);
-    const carrito = data.filter(n => { return Number(n)})
-    console.log(carrito);
-  
-    const newData = document.createElement("div");
-    const newImage = document.createElement("img");
-    newData.innerHTML = "<div>" + "Hello" + "</div>"
-    newData.style.color = "red"
-    newData.style.width = "1000px";
-    newData.style.fontSize = "2rem";
-    newImage.style.width = "30vw";
+    const data = string.match(/\d+/g)
+
+
+    const numbers = data.map(Number) // Recibe todos los parametros de la variable string, solo deja los numeros pero queda todo el resto como NaN
+    const carrito = numbers.filter(n =>
+      !Number.isNaN(n));
+    console.log(carrito) 
+ 
     fetch("http://localhost:3000/api/productos")
             .then(response =>  response.json())
             .then(prod =>  {
-                const result = prod.map(res=>{return res})
-           for(let i = 0; i < result.length; i++) {
+                console.log(prod)
+                
+           for(let i = 0; i < prod.length; i++) {
+               for( let j = 0; j < carrito.length; j++) {
+
+              if(prod[i].id === carrito[j]) {
+              
+                const producto = document.createElement("div")
+                const nombre = document.createElement("p")
+                const imagen = document.createElement("img")
                
-            if(result[i].id = carrito[i]) {
-                productName.innerText = result[i].name
-              newprod =  result[i].name + " ";
-              newData.appendChild(newprod)
-              productImg.setAttribute('src', `${result[i].image}`); 
+              nombre.innerText =  prod[i].name;
+              
+              imagen.setAttribute('src', `${prod[i].image}`); 
+              console.log(imagen);
+              cartProduct.innerHTML += "<div>" + imagen.outerHTML + nombre.outerHTML  +  "</div>" 
+              console.log(cartProduct)
 
             } 
            }
+          }
         });
 
- document.body.appendChild(newData)
+
 
 
 

@@ -463,10 +463,27 @@ footer {
   justify-content: center;
 }
 /*---------------- CARRITO -------------------*/
-.cartProducts {
-  width: 30vw;
-  color: blue;
-  border: 1px red solid;
+.cartProduct {
+  width: 100%;
+  padding: 40px 50px;
+}
+
+.cartProduct div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 50px;
+  border-bottom: 1px yellow solid
+  
+}
+.cartProduct div p {
+  font-size: 2rem;
+  margin: 20px
+}
+
+.cartProduct div img {
+  width: 10vw;
 }
 /* --------------QUERIES----------*/
 
