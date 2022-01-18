@@ -442,7 +442,10 @@ footer {
   align-items: center;
   padding: 5px;
   width: 100%;
+  margin-top: 50px;
   max-width: 500px;
+  border-top: 1px solid yellow;
+
 }
 
 .footerbox01,
@@ -766,4 +769,23 @@ form.login-form {
   right: 2%;
   font-size: 1.2rem;
   
+}
+
+/* ------------------ CREATE PRODUCT ------------------------*/
+
+.create-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+
+.create-control-categorias {
+  display: flex;
+  flex-direction: row;
+}
+.category {
+  padding-top: 20px
 }

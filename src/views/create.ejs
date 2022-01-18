@@ -1,12 +1,67 @@
 <%- include('./partials/head.ejs') %>
 <body>
     <%- include('./partials/header.ejs') %>
+    <main class="register-main">  
+        <!-- FORMULARIO -->
+        <form class="create-product" id="createProduct" action="/products/create" method="post" enctype="multipart/form-data"><!--ENCTYPE SE AGREGA SOLO SI TENEMOS INPUT DE TIPO FILE-->
+            
+            
+            <div class="form-control">
+                <label for="name">Nombre del Producto</label>
+                <input name="name" id="name" type="text" placeholder="">
+                <span style="color: red"></span>
+            </div>
 
-    <div>   
-        <form action="">
+            <div class="form-control">
+                <label for="">Descripción</label>
+                <input style="height: 60px" type="text" name="description" placeholder="Escribe una descripción">
+            
+            </div>
+            <div class="form-control">
+                <label for="">Marca</label>
+                <input type="text" name="brand">
+            
+            </div>
+            <label class="category">Categorias</label>
+            <div class="form-control-categorias">
+                
+                <div class="electro-box">
+                    <input type="checkbox" name="electro" id="electro">
+                    <label for="electro">Electro</label>
+                </div>
+                <div class="moda-box">
+                    <input type="checkbox" name="moda" id="moda">
+                    <label for="moda">Moda</label>
+                </div>
+                <div class="healthy-box">
+                    <input type="checkbox" name="healthy" id="healthy">
+                    <label for="healthy">Vida Sana</label>
+                </div>
+                <div class="toy-box">
+                    <input type="checkbox" name="toy" id="toy">
+                    <label for="toy">Juguetería</label>
+                    </div>
+                <div class="home-box">
+                        <input type="checkbox" name="home" id="home">
+                        <label for="home">Hogar</label>
+                    </div>
+            
+            </div>
+
+            <div class="form-control-avatar">
+                <label for="">Imagén</label>
+                <input type="file" name="productimg">
+            
+            </div>
+            
+                <div class="buttons-box">
+                    <button class="enviar" type="submit">Confirmar</button>
+                    <button class="enviar" type="reset">Borrar</button>
+                </div>
             
         </form>
-    </div>
+    </main>
+    
     <%- include('./partials/footer.ejs') %>
     
 </body>
