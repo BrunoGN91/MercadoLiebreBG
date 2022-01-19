@@ -50,6 +50,7 @@
     <article class='article'>
         <div class="main-images">
             <% stocked.forEach(producto => {  %> 
+                
             <div id="contenedorProducto" class='contenedor01'>
                 <img src="<%=producto.image%> ">
                 <div class='sub-contenedor01'>
@@ -66,16 +67,19 @@
                      
                 </div>
                 <div class="contenedor01-data">
-                    
+                    <a href="/products/detail/<%=producto.id%>">
                    <p id="productName"><%=producto.name%></p>
+                </a>
             </div>
         </div>
+    
         <% }) %> 
     </div>
     </article>    
     <section class="noticia">Ofertas</section>
     <div class="main-images">
-        <% offers.forEach(producto => {  %> 
+        <% productos.forEach(producto => {  %> 
+            <a href="/products/detail/<%=producto.id%>">
         <div class='contenedor01'>
             <img src="<%=producto.image%> ">
             <div class='sub-contenedor01'>
@@ -87,6 +91,7 @@
                 <%=producto.name%>
         </div>
     </div>
+    </a>
     <% }) %> 
 </div>         
     </main>

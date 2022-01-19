@@ -24,7 +24,7 @@ module.exports = {
             return offers;
             
         })
-        res.render('home', {stocked: stocked, offers: offers})
+        res.render('home', {stocked: stocked, offers: offers, productos: productos})
     },
     cart: function (req, res) {
         

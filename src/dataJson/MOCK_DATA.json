@@ -298,33 +298,5 @@
         "price": 7204,
         "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACwSURBVDjL7dI7CsJAFIXhrCMLOm5rlmAjgiA+CtNF7AQrsVBEtNBBBBERC4kBIZm8JjHHuAAhInYp/vJ+cOAaJI1fMirgA1DLzSKRIZUxIvmAJ264m98A4tnPma0003lCv6t4wkWUBlJo+T7WvYBxo2gYcYuDLA14UFJPE8ZNxageMLBCLrApDzhwhdfxGdshw4Gi03Y5wqT8hDOu5h5HscZOzrCUNsaiBcusPvFPwAtRJv5/iiq/OwAAAABJRU5ErkJggg==",
         "discounts": 60
-    },
-    {
-        "id": 31,
-        "productName": "Ejemplo",
-        "description": "asdasdasd",
-        "brand": "2",
-        "healthy": "on"
-    },
-    {
-        "id": 32,
-        "name": "asdasda",
-        "description": "",
-        "brand": "",
-        "healthy": "on"
-    },
-    {
-        "id": 33,
-        "name": "sssssssssssss",
-        "description": "",
-        "brand": "",
-        "healthy": "on"
-    },
-    {
-        "id": 34,
-        "name": "sdasd",
-        "description": "",
-        "brand": "",
-        "toy": "on"
     }
 ]
