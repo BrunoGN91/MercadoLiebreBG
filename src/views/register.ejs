@@ -4,7 +4,7 @@
     
     <main class="register-main">  
         <!-- FORMULARIO -->
-        <form class="register-form" id="register" action="/register" method="POST" ><!--ENCTYPE SE AGREGA SOLO SI TENEMOS INPUT DE TIPO FILE-->
+        <form class="register-form" id="register" action="/register" method="POST" enctype="multipart/form-data"><!--ENCTYPE SE AGREGA SOLO SI TENEMOS INPUT DE TIPO FILE-->
             
             
             <div class="form-control">
@@ -24,43 +24,11 @@
             
             </div>
             <div class="form-control">
-                <label for="">Domicilio</label>
-                <input type="text" name="address">
+                <label for="">Email</label>
+                <input type="text" name="email">
             
             </div>
-            
-            <div class="form-control">
-                <label for="">Perfil de Usuario</label>
-                <select name="user_profile" class="perfil-opciones">
-                    <option disabled selected>  Selecciona una opción</option>
-                    <option value="comprador">Comprador</option>
-                    <option value="vendedor">Vendedor</option>
-                </select>
-            </div>
-            <p>Categorias</p>
-            <div class="form-control-categorias">
-                <div class="electro-box">
-                    <input type="checkbox" name="Electro" id="electro">
-                    <label for="electro">Electro</label>
-                </div>
-                <div class="moda-box">
-                    <input type="checkbox" name="Moda" id="moda">
-                    <label for="moda">Moda</label>
-                </div>
-                <div class="healthy-box">
-                    <input type="checkbox" name="healthy" id="healthy">
-                    <label for="healthy">Vida Sana</label>
-                </div>
-                <div class="toy-box">
-                    <input type="checkbox" name="toy" id="toy">
-                    <label for="toy">Juguetería</label>
-                    </div>
-                <div class="home-box">
-                        <input type="checkbox" name="home" id="home">
-                        <label for="home">Hogar</label>
-                    </div>
-            
-            </div>
+
 
             <div class="form-control-avatar">
                 <label for="">Avatar</label>
@@ -72,11 +40,7 @@
                 <input type="password" name="password" selected >
             
             </div>
-            <div class="form-control">
-                <label for="">Confirmar Contraseña</label>
-                <input type="password" name="password" selected >
             
-            </div>
                 <div class="buttons-box">
                     <button class="enviar" type="submit">Registrate</button>
                     <button class="enviar" type="reset">Borrar</button>

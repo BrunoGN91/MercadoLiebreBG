@@ -2,9 +2,20 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const cookieParser = require("cookie-parser");
-const method = require("method-override")
-/* Configuracion Extra para Ruta de Imagenes Public */
+const method = require("method-override");
+const session = require("express-session");
+const userLogged = require("./Mw/userLogged.js")
 
+
+/* Session */
+app.use(session({
+	secret: "secret",
+	resave: false,
+	saveUninitialized: false,
+}));
+/* Configuracion Extra para Ruta de Imagenes Public */
+app.use(cookieParser());
+app.use(userLogged)
 
 app.use(express.static(path.resolve(__dirname, '../public')));
 
@@ -29,6 +40,7 @@ app.use(cookieParser())
 const usersRouter = require('./routes/users.js');
 const mainRoute = require('./routes/main.js');
 const productRoute = require('./routes/product.js');
+const rememberMw = require('./Mw/rememberMw.js');
 
 app.use('/', mainRoute);
 app.use('/', usersRouter);

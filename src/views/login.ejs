@@ -3,13 +3,13 @@
     <%- include('./partials/header.ejs') %>
     <img class="banner" src="/images/img-home-banner.jpg" alt="">
     <main class="login-main">
-        <form class="login-form" action="/login" method="POST" enctype="multipart/form-data">
+        <form class="login-form" action="/login" method="POST">
             <div class="form-login">
-                <label for="">Nombre y Apellido</label>
-                <input type="text" name="fullname" required>
+                <label for="">Email</label>
+                <input type="text" name="email">
                 <span class="user-error"></span>
                 <label for="">Contraseña</label>
-                <input type="password" name="password" class="password" required> 
+                <input type="password" name="password" class="password"> 
                 <span class="password-error" id="ojito"><i class="fas fa-eye"></i></span>
 
             </div>
